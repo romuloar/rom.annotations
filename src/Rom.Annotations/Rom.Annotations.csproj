@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageId>Rom.Annotationss</PackageId>
+	  <Version>1.0.0</Version>
+	  <Authors>Romulo Ribeiro</Authors>
+	  <Company>Rom</Company>
+	  <Description>
+		  A growing library of custom attributes to enhance validation and domain modeling using a clean,
+		  declarative approach with .NET DataAnnotations style.
+	  </Description>
+	  <PackageTags>validation;attributes;dotnet</PackageTags>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/romuloar/rom.annotations</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
