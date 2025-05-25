@@ -32,14 +32,14 @@ Nuget-Install Rom.Annotation
 
 | Group name      | Attributes | Group name      | Attributes |
 |:---------------:|:----------|:---------------:|:-----------|
-| **📦 Collection** | 🔸 [ListCountMax](#listcountmax)<br/>🔸 [ListCountMin](#listcountmin)<br/>🔸 [ListCountRange](#listcountrange)<br/>🔸 [ListItemsUnique](#listitemsunique)<br/>🔸 [ListItemsCondition](#listitemscondition) | **🔀 Comparison** | 🔸 [CompareFields](#comparefields)<br/>🔸 [GreaterThan](#greaterthan)<br/>🔸 [LessThan](#lessthan)<br/>🔸 [NotEqualTo](#notequalto) |
-| **⚡ Conditional** | 🔸 [ConditionalPattern](#conditionalpattern)<br/>🔸 [ConditionalValidation](#conditionalvalidation)<br/>🔸 [RangeIf](#rangeif)<br/>🔸 [RequiredGuid](#requiredguid)<br/>🔸 [RequiredIf](#requiredif)<br/>🔸 [RequiredEnum](#RequiredEnum)<br/>🔸 [RequiredIfFalse](#requirediffalse)<br/>🔸 [RequiredIfInSet](#requiredifinset)<br/>🔸 [RequiredIfNullOrWhiteSpace](#requiredifnullorwhitespace)<br/>🔸 [RequiredIfTrue](#requirediftrue)<br/>🔸 [RequiredList](#requiredlist)<br/>🔸 [RequiredString](#requiredstring) | **🛠️ Custom** | 🔸 [PredicateValidation](#predicatevalidation) |
-| **📅 Date** | 🔸 [DateEarlierThan](#dateearlierthan)<br/>🔸 [DateIsUtc](#dateisutc)<br/>🔸 [DateLaterThan](#datelaterthan)<br/>🔸 [DateRange](#daterange) | **🔖 Generic** | 🔸 [AllowedValues](#allowedvalues)<br/>🔸 [DisallowedValues](#disallowedvalues) | **🪁 Multiple Fields** | 🔸 [AtLeastOneRequired](#atleastonerequired)<br/>🔸 [MutuallyExclusive](#mutuallyexclusive)<br/>🔸 [OnlyOneRequired](#onlyonerequired) |
-| **🔢 Numeric** | 🔸 [DecimalPrecision](#decimalprecision) | **🔤 String** | 🔸 [StringContains](#stringcontains)<br/>🔸 [StringLengthEquals](#stringlengthequals)<br/>🔸 [StringNotContains](#stringnotcontains) |
+| **📦 Collection** | 🔸 [ListCountMax](#ListCountMax)<br/>🔸 [ListCountMin](#ListCountMin)<br/>🔸 [ListCountRange](#ListCountRange)<br/>🔸 [ListItemsUnique](#ListItemsUnique)<br/>🔸 [ListItemsCondition](#ListItemsCondition) | **🔀 Comparison** | 🔸 [CompareFields](#CompareFields)<br/>🔸 [GreaterThan](#GreaterThan)<br/>🔸 [LessThan](#LessThan)<br/>🔸 [NotEqualTo](#NotEqualTo) |
+| **⚡ Conditional** | 🔸 [ConditionalPattern](#ConditionalPattern)<br/>🔸 [ConditionalValidation](#ConditionalValidation)<br/>🔸 [RangeIf](#RangeIf)<br/>🔸 [RequiredGuid](#RequiredGuid)<br/>🔸 [RequiredIf](#RequiredIf)<br/>🔸 [RequiredEnum](#RequiredEnum)<br/>🔸 [RequiredIfFalse](#RequiredIfFalse)<br/>🔸 [RequiredIfInSet](#RequiredIfInSet)<br/>🔸 [RequiredIfNullOrWhiteSpace](#RequiredIfNullOrWhiteSpace)<br/>🔸 [RequiredIfTrue](#RequiredIfTrue)<br/>🔸 [RequiredList](#RequiredList)<br/>🔸 [RequiredString](#RequiredString) | **🛠️ Custom** | 🔸 [PredicateValidation](#PredicateValidation) |
+| **📅 Date** | 🔸 [DateEarlierThan](#DateEarlierThan)<br/>🔸 [DateIsUtc](#DateIsUtc)<br/>🔸 [DateLaterThan](#DateLaterThan)<br/>🔸 [DateRange](#DateRange) | **🔖 Generic** | 🔸 [AllowedValues](#AllowedValues)<br/>🔸 [DisallowedValues](#DisallowedValues) | **🪁 Multiple Fields** | 🔸 [AtLeastOneRequired](#AtLeastOneRequired)<br/>🔸 [MutuallyExclusive](#MutuallyExclusive)<br/>🔸 [OnlyOneRequired](#OnlyOneRequired) |
+| **🔢 Numeric** | 🔸 [DecimalPrecision](#DecimalPrecision) | **🔤 String** | 🔸 [StringContains](#StringContains)<br/>🔸 [StringLengthEquals](#StringLengthEquals)<br/>🔸 [StringNotContains](#StringNotContains) |
 
 ### 📦 Collection
 
-## 📌 ListCountMax
+## ListCountMax
 
 Validates that the list has at most a maximum number of items.
 	
@@ -60,7 +60,7 @@ Validates that the list has at most a maximum number of items.
 	}
 ```
 
-## 📌 ListCountMin  
+## ListCountMin  
 Validates that the list has at least a minimum number of items.
 
 ### 🚀 Quick Example
@@ -80,7 +80,7 @@ public class EmptyModel
 }
 ```
 
-## 📌 ListCountRange
+## ListCountRange
 
 Validates that the list has between a minimum and maximum number of items (inclusive).
 ### 🚀 Quick Example
@@ -107,7 +107,7 @@ public class LargeModel
 }
  ```
 
-## 📌 ListItemsUnique
+## ListItemsUnique
 
 Ensures all items in the list are unique (no duplicates).
 
@@ -128,7 +128,7 @@ public class DuplicateModel
 }
 ```
 
-## 📌 ListItemsCondition
+## ListItemsCondition
 
 Validates each item in the list against a condition or attribute.
 ### 🚀 Quick Example
@@ -161,7 +161,7 @@ public class RequiredStringAttribute : ValidationAttribute
 
 ### 🔀 Comparison
 
-## 📌 CompareFields	
+## CompareFields	
 Validates if two fields in the same object are equal or different.
 
 ### 🚀 Quick Example
@@ -195,7 +195,7 @@ public class OrderModel
 }
 ```
 
-## 📌 GreaterThan	
+## GreaterThan	
 Validates that the current field is greater than the value of another specified field.
 
 ### 🚀 Quick Example
@@ -229,7 +229,7 @@ public class NullableModel
 
 ```
 
-## 📌 LessThan	
+## LessThan	
 Validates that the value of the property is less than the value of another property.
 Supports numeric types and DateTime.
 
@@ -265,7 +265,7 @@ public class NullableModel
 }
 ```
 
-## 📌 NotEqualTo	
+## NotEqualTo	
 Validates that the value of the current field is NOT equal to the value of the specified other field.
 
 ### 🚀 Quick Example
@@ -304,7 +304,7 @@ public class NullableFields
 
 ### ⚡ Conditional
 
-## 📌 ConditionalPattern  
+## ConditionalPattern  
 Validates a string property with a regex pattern if another property has a specific value.
 
 ### 🚀 Quick Example
@@ -358,7 +358,7 @@ public class PaymentModel
 
 ```
 
-## 📌 ConditionalValidation
+## ConditionalValidation
 Validates a field using a specified validation attribute if another property has a specific value.
 
 ### 🚀 Quick Example
@@ -400,7 +400,7 @@ public class PaymentModel
 }
 ```
 
-## 📌 RangeIf
+## RangeIf
 Validates if a numeric field is within a given range only if another field has a specific value.
 
 ### 🚀 Quick Example
@@ -450,7 +450,7 @@ public class Order
 }
 ```
 
-## 📌 RequiredEnum
+## RequiredEnum
 Ensures that an enum value is selected and is not the default (usually zero).
 ### 🚀 Quick Example
 ```csharp
@@ -470,7 +470,7 @@ public class OrderModel
 }
 ```
 
-## 📌 RequiredGuid	
+## RequiredGuid	
 Validates that a Guid property is not Guid.Empty.
 
 ### 🚀 Quick Example
@@ -501,7 +501,7 @@ public class Order
 }
 ```
 
-## 📌 RequiredIf
+## RequiredIf
 Makes the field required if another field has a specific value.
 
 ### 🚀 Quick Example
@@ -546,7 +546,7 @@ public class OrderModel
 }
 ```
 
-## 📌 RequiredIfFalse
+## RequiredIfFalse
 Makes the field required if another boolean field is false.
 
 ### 🚀 Quick Example
@@ -578,7 +578,7 @@ public class ApprovalForm
 	public string Signature { get; set; }
 }
 ```
-## 📌 RequiredIfInSet	
+## RequiredIfInSet	
 Makes the field required if the value of another field is in the specified set of values.
 
 ### 🚀 Quick Example
@@ -600,7 +600,7 @@ var example2 = new Example1 { Status = "Completed", Description = null };
 // Validation will succeed
 ```
 
-## 📌 RequiredIfNullOrWhiteSpace		
+## RequiredIfNullOrWhiteSpace		
 Makes the field required if another property is not null.
 Useful when a field must be filled only when another is present. 
 
@@ -641,7 +641,7 @@ public class Order
 }
 ```
 
-## 📌 RequiredIfTrue	
+## RequiredIfTrue	
 Makes the field required if another boolean property is true.
 
 ### 🚀 Quick Example
@@ -672,7 +672,7 @@ public class Document
 }
 ```
 
-## 📌 RequiredList	
+## RequiredList	
 Validates that a collection property is not null and contains at least one item.
 Supports IEnumerable, arrays, List, Collection, etc.
 
@@ -701,7 +701,7 @@ public class Report
 
 ```
 
-## 📌 RequiredString	
+## RequiredString	
 Validates that a string property is not null, empty or whitespace.
 
 ### 🚀 Quick Example
@@ -727,7 +727,7 @@ var example2 = new Example1 { Name = "John Doe" };
 
 ### 🛠️ Custom
 
-## 📌 PredicateValidation
+## PredicateValidation
 Allows custom validation logic by specifying a predicate method name on the model class.
 ### 🚀 Quick Example
 ```csharp
@@ -747,7 +747,7 @@ public class TestModel
 
 ### 📅 Date
 
-## 📌 DateEarlierThan	
+## DateEarlierThan	
 Validates that the value of the property is earlier than the value of another property.
 Supports DateTime and nullable DateTime.
 
@@ -782,7 +782,7 @@ public class CustomMessageModel
 
 ```
 
-## 📌 DateIsUtc
+## DateIsUtc
 Validates that the value of the property is a UTC DateTime.
 
 ### 🚀 Quick Example
@@ -809,7 +809,7 @@ public class WrongEventModel
 }
 ```
 
-## 📌 DateLaterThan  
+## DateLaterThan  
 Validates that the value of the date property is later than the value of another date property.
 
 ### 🚀 Quick Example
@@ -842,7 +842,7 @@ public class InvalidEventModel
 }	
 ```
 
-## 📌 DateRange  
+## DateRange  
 Validates that the date is within the specified inclusive range.
 
 ### 🚀 Quick Example
@@ -871,7 +871,7 @@ public class FutureEventModel
 
 ### 🔖 Generic
 
-## 📌 AllowedValues
+## AllowedValues
 
 Validates that the value belongs to a specified set of allowed values.
 ### 🚀 Quick Example
@@ -884,7 +884,7 @@ public class UserModel
 }
 ```
 
-## 📌 DisallowedValues
+## DisallowedValues
 
 Validates that the value does NOT belong to a specified set of disallowed values.
 ### 🚀 Quick Example
@@ -899,7 +899,7 @@ public class UserModel
 
 ### 🔢 Numeric
 
-## 📌 DecimalPrecision
+## DecimalPrecision
 
 Controls the number of decimal places allowed in a numeric value.
 ### 🚀 Quick Example
@@ -914,7 +914,7 @@ public class ProductModel
 
 ### 🔤 String
 
-## 📌 StringContains
+## StringContains
 Validates that a string property contains a specified substring.
 ### 🚀 Quick Example
 ```csharp
@@ -926,7 +926,7 @@ public class UserModel
 }
 ```
 
-## 📌 StringLengthEquals
+## StringLengthEquals
 Validates that the string length is exactly equal to the specified value.
 Examples:
 ```csharp
@@ -940,7 +940,7 @@ public class TestModel
 // Invalid: model.Code = "1234" or "123456"
 ```
 
-## 📌 StringNotContains
+## StringNotContains
 Validates that a string property does NOT contain a specified substring.
 ### 🚀 Quick Example
 ```csharp
