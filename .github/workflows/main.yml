@@ -25,10 +25,10 @@ jobs:
 
       - name: Pack
         run: dotnet pack src/Rom.Annotations/Rom.Annotations.csproj --configuration Release --no-build -o ./nupkg
-      
+
       - name: List nupkg files
         run: dir ./nupkg
       
       - name: Publish to NuGet
-        run: dotnet nuget push ${{ github.workspace }}/nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
