@@ -1,6 +1,6 @@
-# Rom.Annotation
+# Rom.Annotations
 
-Welcome to **Rom.Annotation** — 
+Welcome to **Rom.Annotations** — 
 a growing library of custom attributes to enhance validation and domain modeling using a clean, 
 declarative approach with .NET DataAnnotations style.
 A collection of reusable .NET validation attributes for models and DTOs.
