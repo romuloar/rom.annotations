@@ -8,9 +8,11 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    environment: nuget
+    environment: nuget # Use o nome do seu Environment
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -21,14 +23,19 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build src/Rom.Annotations/Rom.Annotations.csproj --configuration Release --no-restore
 
       - name: Pack
         run: dotnet pack src/Rom.Annotations/Rom.Annotations.csproj --configuration Release --no-build -o ./nupkg
 
-      - name: List nupkg files
-        run: dir ./nupkg
-      
+      - name: Show current directory and files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Root files:"
+          dir
+          echo "nupkg files:"
+          dir ./nupkg
+
       - name: Publish to NuGet
         run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
-
