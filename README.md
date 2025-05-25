@@ -7,7 +7,7 @@ A collection of reusable .NET validation attributes for models and DTOs.
   
 Supports .NET Standard 2.0 and .NET 9.
 
-## 🔧 Why Rom.Annotation?
+## 🔧 Why Rom.Annotations?
 
 .NET’s built-in `[Required]`, `[Range]`, `[StringLength]` and others are great — but real-world validations are often conditional, field-dependent, or more complex.
 
@@ -23,9 +23,13 @@ Rom.Annotation brings the power to express those rules **with clarity and mainta
 
 ## Installation
 
+>#### .NET CLI
 ```bash
-dotnet install Rom.Annotation
-Nuget-Install Rom.Annotation
+dotnet add package Rom.Annotations
+```
+>#### Package Manager
+```bash
+Install-Package Rom.Annotations
 ```
 
 ## 📚 Table of Contents
