@@ -39,7 +39,7 @@ Install-Package Rom.Annotations
 | **📦 Collection** | 🔸 [ListCountMax](#ListCountMax)<br/>🔸 [ListCountMin](#ListCountMin)<br/>🔸 [ListCountRange](#ListCountRange)<br/>🔸 [ListItemsUnique](#ListItemsUnique)<br/>🔸 [ListItemsCondition](#ListItemsCondition) | **🔀 Comparison** | 🔸 [CompareFields](#CompareFields)<br/>🔸 [GreaterThan](#GreaterThan)<br/>🔸 [LessThan](#LessThan)<br/>🔸 [NotEqualTo](#NotEqualTo) |
 | **⚡ Conditional** | 🔸 [ConditionalPattern](#ConditionalPattern)<br/>🔸 [ConditionalValidation](#ConditionalValidation)<br/>🔸 [RangeIf](#RangeIf)<br/>🔸 [RequiredGuid](#RequiredGuid)<br/>🔸 [RequiredIf](#RequiredIf)<br/>🔸 [RequiredEnum](#RequiredEnum)<br/>🔸 [RequiredIfFalse](#RequiredIfFalse)<br/>🔸 [RequiredIfInSet](#RequiredIfInSet)<br/>🔸 [RequiredIfNullOrWhiteSpace](#RequiredIfNullOrWhiteSpace)<br/>🔸 [RequiredIfTrue](#RequiredIfTrue)<br/>🔸 [RequiredList](#RequiredList)<br/>🔸 [RequiredString](#RequiredString) | **🛠️ Custom** | 🔸 [PredicateValidation](#PredicateValidation) |
 | **📅 Date** | 🔸 [DateEarlierThan](#DateEarlierThan)<br/>🔸 [DateIsUtc](#DateIsUtc)<br/>🔸 [DateLaterThan](#DateLaterThan)<br/>🔸 [DateRange](#DateRange) | **🔖 Generic** | 🔸 [AllowedValues](#AllowedValues)<br/>🔸 [DisallowedValues](#DisallowedValues) | **🪁 Multiple Fields** | 🔸 [AtLeastOneRequired](#AtLeastOneRequired)<br/>🔸 [MutuallyExclusive](#MutuallyExclusive)<br/>🔸 [OnlyOneRequired](#OnlyOneRequired) |
-| **🔢 Numeric** | 🔸 [DecimalPrecision](#DecimalPrecision) | **🔤 String** | 🔸 [StringContains](#StringContains)<br/>🔸 [StringLengthEquals](#StringLengthEquals)<br/>🔸 [StringNotContains](#StringNotContains) |
+| **🔢 Numeric** | 🔸 [DecimalPrecision](#DecimalPrecision) | **🔤 String** | 🔸 [StringContains](#StringContains)<br/>🔸 [StringLengthEquals](#StringLengthEquals)<br/>🔸 [StringNotContains](#StringNotContains)<br/>🔸 [Ulid](#Ulid) |
 
 ### 📦 Collection
 
@@ -954,6 +954,25 @@ public class UserModel
 	[StringNotContains(" ", ErrorMessage = "Username cannot contain spaces.")]
 	public string Username { get; set; }
 }
+```
+
+## Ulid
+
+Validates that a string is a valid ULID (Universally Unique Lexicographically Sortable Identifier).
+
+- The value must be a string with exactly 26 characters, using only valid ULID base32 characters (0-9, A-Z excluding I, L, O, U).
+- The value cannot be null, empty, or consist only of whitespace.
+
+### 🚀 Quick Example
+
+```csharp
+// Example 1: Username must not contain spaces
+public class UserModel
+{
+	[Ulid(ErrorMessage = "The identifier must be a valid ULID.")] 
+	public string Id { get; set; } 
+}
+
 ```
 
 ## Contribution
